@@ -1,0 +1,165 @@
+! font settings --------------------------------------------------------------
+
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+!Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+
+! xscreensaver ---------------------------------------------------------------
+
+!font settings
+xscreensaver.Dialog.headingFont:        -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-fixed-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-fixed-medium-r-*-*-14-*-*-*-*-*-*-*
+!general dialog box (affects main hostname, username, password text)
+xscreensaver.Dialog.foreground:         #101010
+xscreensaver.Dialog.background:         #D8D8D8
+xscreensaver.Dialog.topShadowColor:     #D8D8D8
+xscreensaver.Dialog.bottomShadowColor:  #D8D8D8
+xscreensaver.Dialog.Button.foreground:  #101010
+xscreensaver.Dialog.Button.background:  #E5E5E5
+!username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:    #101010
+xscreensaver.Dialog.text.background:    #E5E5E5
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        0
+xscreensaver.Dialog.shadowThickness:    2
+!timeout bar (background is actually determined by Dialog.text.background)
+xscreensaver.passwd.thermometer.foreground:  #101010
+xscreensaver.passwd.thermometer.background:  #2E2E2E
+xscreensaver.passwd.thermometer.width:       8
+
+! urxvt -------------------------------------------
+
+URxvt.font: xft:clean:size=10
+URxvt.boldFont: xft:Monospace:Bold:size=11
+URxvt.letterSpace: -2
+! Add fallback fonts as laid out in `man 1 urxvt` under "font:" in the RESOURCES section
+
+! Window size and position
+! URxvt*geometry: 60x22+50+100
+! Window size, let the Window Manager position it
+URxvt.geometry: 86x25+2620+390
+
+URxvt.scrollstyle: plain
+URxvt.scrollBar: false
+URxvt.scrollBar_right: true
+URxvt.iconFile: /usr/share/icons/Faenza-Bunsen-common/apps/48/utilities-terminal.png
+
+URxvt.background: #111E26
+URxvt.foreground: #66767F
+URxvt.backgroundPixmap: /home/cthulhu/Pictures/term3.png;+0+0:tile -tr
+
+! Low contrast theme, based on Zenburn <http://slinky.imukuppi.org/zenburnpage/>
+! Modified from <https://gist.github.com/564084>
+URxvt.color0:           #3f3f3f
+URxvt.color1:           #705050
+URxvt.color2:           #00b45a
+URxvt.color3:           #dfcf8f
+URxvt.color4:           #506070
+URxvt.color5:           #dc8cc3
+URxvt.color6:           #8cd0d3
+URxvt.color7:           #dcdccc
+URxvt.color8:           #709080
+URxvt.color9:           #cc5454
+URxvt.color10:          #4d9f4d
+URxvt.color11:          #f0dfaf
+URxvt.color12:          #4186be
+URxvt.color13:          #ec93d3
+URxvt.color14:          #93e0e3
+URxvt.color15:          #ffffff
+
+! scrollback buffer lines - 65535 is max (64 is default)
+URxvt.saveLines:16384
+
+! True Transparency, opacity percentage set in square brackets before URxvt.background colour
+URxvt.depth: 32
+
+! Clickble URLs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/x-www-browser
+URxvt.matcher.button: 3
+
+! Custom colourscheme, see http://terminal.sexy/ for more ideas.
+
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #66767F
+URxvt*cursorColor: #66767F
+URxvt*cursorColor2: #66767F
+URxvt*cursorUnderline: true
+URxvt*pointerColor: #66767F
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #a54242
+*.color9:       #cc6666
+
+! green
+*.color2:       #8c9440
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #de935f
+*.color11:      #f0c674
+
+! blue
+*.color4:       #5f819d
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
+! Colourised man pages, also changes scheme for htop(1) and others.
+!
+! Headings:
+! URxvt.colorBD: #cf6171
+!
+! Underline:
+! URxvt.colorUL: #4186be
+!
+! Italicised:
+! URxvt.colorIT: #71bebe
+
+xterm*loginShell:      true
+xterm*vt100*geometry:  80x25
+!xterm*renderFont:     true
+xterm.vt100.faceName:  Liberation Mono:size=10:antialias=true
+xterm.vt100.font:      7x10
+!xterm*faceSize:        12
+xterm*allowBoldFonts:  true
+xterm*dynamicColors:   true
+xterm*cursorBlink:     true
+xterm*utf8:            1
+xterm*termName:        xterm-256color
+xterm*saveLines:       4096
+xterm*visualBell:      true
+xterm*bellIsUrgent:    true
+xterm*scrollTtyOutput: false
+xterm*scrollKey:       true
+xterm*fastScroll:      true
+xterm*cutNewline:      true
+xterm*highlightSelection: true
+xterm*eightBitInput:   false
+xterm*backarrowKey:    false
