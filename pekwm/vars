@@ -1,0 +1,4 @@
+$TERM="urxvt"
+$WEB="firefox"
+$EDIT="mousepad"
+$FILE="thunar"
