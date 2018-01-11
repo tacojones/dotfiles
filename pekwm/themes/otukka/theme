@@ -11,7 +11,7 @@ PDecor {
 			Pad = "4 6 6 6"
 
 			Focused = "Image title.png"
-			Unfocused = "Image title.png"
+			        Unfocused = "Image title.png"
 
 			Tab {
 				Focused = "Image title.png"
@@ -20,8 +20,8 @@ PDecor {
 				UnfocusedSelected = "Image title.png"
 			}
 			Separator {
-			Focused = "Image tab_sep.png#tiled"
-	    Unfocused = "Image tab_sep_un.png#tiled"
+			        Focused = "Image tab_sep.png#tiled"
+	                        Unfocused = "Image tab_sep_un.png#tiled"
 			}
 			Font {
 				Focused = "$font"
@@ -37,7 +37,7 @@ PDecor {
 			Right {
 				Focused = "Image button-close-unfocused.png"
 				Unfocused = "Image button-close-unfocused.png"
-                Hoover = "Image button-close-hover.png"
+                                Hoover = "Image button-close-hover.png"
 				Pressed = "Image button-close-pressed.png"
 				Button = "1" { Actions = "Close" }
 				Button = "3" { Actions = "Kill" }
@@ -46,7 +46,7 @@ PDecor {
 			Right {
 				Focused = "Image button-maximize-unfocused.png"
 				Unfocused = "Image button-maximize-unfocused.png"
-                Hoover = "Image button-maximize-hover.png"
+                                Hoover = "Image button-maximize-hover.png"
 				Pressed = "Image button-maximize-pressed.png"
 				Button = "1" { Actions = "Toggle Maximized 1 1" }
 			}
@@ -54,7 +54,7 @@ PDecor {
 			Right {
 				Focused = "Image button-minimize-unfocused.png"
 				Unfocused = "Image button-minimize-unfocused.png"
-                Hoover = "Image button-minimize-hover.png"
+                                Hoover = "Image button-minimize-hover.png"
 				Pressed = "Image button-minimize-pressed.png"
 				Button = "1" { Actions = "Set Iconified" }
 			}
@@ -268,9 +268,10 @@ Menu {
   	Selected {
     		Font = "$font"
     		Background = "Empty"
-		Item = "Image menu-selected.png"
+		Item ="SolidRaised #0E1B23 #0C1921 #0C1921 1  0"
+		# Item = "Image menu-selected.png"
 		Item = "Empty"
-    		Text = "#4f433d"
+    		Text = "#534843"
                 Arrow = "Empty"
   	}
 }
