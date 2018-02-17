@@ -1,0 +1,57 @@
+URxvt.termName: rxvt-unicode
+URxvt.scrollBar: false
+URxvt.font: xft:candy:pixelsize=8
+URxvt.boldFont: xft:candy:pixelsize=8
+URxvt.letterSpace: 0
+URxvt.saveLines: 1000000
+URxvt.perl-ext-common:          default,clipboard
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.clipboard.autocopy:       true
+#URxvt.perl-ext-common: default,matcher
+#URxvt.url-launcher: /usr/bin/x-www-browser
+#URxvt.matcher.button: 3
+URxvt.depth: 32
+URxvt.saveLines:16384
+URxvt.geometry: 86x25+2620+390
+URxvt.underlineURLs: false
+URxvt*macro.Ctrl+Shift+c: Copy
+URxvt*macro.Ctrl+Shift+v: Paste
+URxvt*title: URXVT
+
+
+URxvt.background: #111E26
+URxvt.foreground: #66767F
+#URxvt.background: #162128
+#URxvt.foreground: #576269
+# URxvt.backgroundPixmap: /home/cthulhu/images/term.png;+0+0:tile -tr
+URxvt.iconFile: /home/cthulhu/.icons/Papirus-Dark/32x32/apps/Etermutilities-terminal.svg
+URxvt.cursorColor: #66767F
+URxvt*cursorUnderline: true
+URxvt.colorUL: #2D566E
+
+
+! black
+URxvt*color0  : #273B47
+URxvt*color8  : #0E1920
+! red
+URxvt*color1  : #753434
+URxvt*color9  : #954949
+! green
+URxvt*color2  : #4e7e4e
+URxvt*color10 : #699e69
+! yellow
+URxvt*color3  : #837f3e
+URxvt*color11 : #8C6257
+! blue
+URxvt*color4  : #345C75
+URxvt*color12 : #497a95
+! magenta
+URxvt*color5  : #75507B
+URxvt*color13 : #AD7FA8
+! cyan
+URxvt*color6  : #387e7a
+URxvt*color14 : #34E2E2
+! white
+URxvt*color7  : #213846
+URxvt*color15 : #213846
