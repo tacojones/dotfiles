@@ -7,17 +7,17 @@ setxkbmap -option ctrl:nocaps
 ## Compton
 ## NOTE: composition must be started before tint2
 
-#bl-compositor --start --config /home/cthulhu/.pekwm/compton.conf -b
-compton --config /home/cthulhu/.pekwm/compton.conf -b &
+#bl-compositor --start --config ~/.pekwm/compton.conf -b
+compton --config ~/.pekwm/compton.conf -b &
 
-tint2 -c /home/cthulhu/.config/tint2/tint2rc &
+tint2 -c ~/.config/tint2/tint2rc &
 
-aplay /home/cthulhu/.pekwm/taiko.wav &
+aplay ~/.pekwm/taiko.wav &
 
 # Launch network manager applet
 (sleep 4s && nm-applet --sm-disable) &
 
-conky -c /home/cthulhu/.pekwm/pek_conkyrc &
+conky -c ~/.pekwm/pek_conkyrc &
 
 # Thunar daemon (Auto mounting external devices)
 thunar --daemon &
