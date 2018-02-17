@@ -56,13 +56,16 @@ statusbar_color = "white"
 titles_visibility = "no"
 enable_window_title = "yes"
 
-now_playing_prefix = "$5»$b"
+#now_playing_prefix = "$5»$b"
+now_playing_prefix = "$b"
 now_playing_suffix = "$/b$8"
 
 song_columns_list_format = "(6)[]{} (23)[red]{a} (26)[yellow]{t|f} (40)[green]{b} (4)[blue]{l}"
 
 color1 = "white"
 color2 = "black"
+
+main_window_color = "default"
 
 state_line_color = "black"
 
