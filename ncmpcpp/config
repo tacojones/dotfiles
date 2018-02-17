@@ -1,4 +1,4 @@
-mpd_music_dir = "/home/cthulhu/music/"
+mpd_music_dir = "~/music/"
 ncmpcpp_directory = "~/.ncmpcpp"
 
 mouse_list_scroll_whole_page = "yes"
