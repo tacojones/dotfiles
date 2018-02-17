@@ -24,8 +24,8 @@ URxvt.background: #111E26
 URxvt.foreground: #66767F
 #URxvt.background: #162128
 #URxvt.foreground: #576269
-# URxvt.backgroundPixmap: /home/cthulhu/images/term.png;+0+0:tile -tr
-URxvt.iconFile: /home/cthulhu/.icons/Papirus-Dark/32x32/apps/Etermutilities-terminal.svg
+# URxvt.backgroundPixmap: ~/images/term.png;+0+0:tile -tr
+URxvt.iconFile: ~/.icons/Papirus-Dark/32x32/apps/Etermutilities-terminal.svg
 URxvt.cursorColor: #66767F
 URxvt*cursorUnderline: true
 URxvt.colorUL: #2D566E
