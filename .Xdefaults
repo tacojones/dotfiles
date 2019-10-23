@@ -8,9 +8,6 @@ URxvt.perl-ext-common:          default,clipboard
 URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
 URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
 URxvt.clipboard.autocopy:       true
-#URxvt.perl-ext-common: default,matcher
-#URxvt.url-launcher: /usr/bin/x-www-browser
-#URxvt.matcher.button: 3
 URxvt.depth: 32
 URxvt.saveLines:16384
 URxvt.geometry: 86x25+2620+390
@@ -22,9 +19,6 @@ URxvt*title: URXVT
 
 URxvt.background: #111E26
 URxvt.foreground: #66767F
-#URxvt.background: #162128
-#URxvt.foreground: #576269
-# URxvt.backgroundPixmap: ~/images/term.png;+0+0:tile -tr
 URxvt.iconFile: ~/.icons/Papirus-Dark/32x32/apps/Etermutilities-terminal.svg
 URxvt.cursorColor: #66767F
 URxvt*cursorUnderline: true
@@ -35,23 +29,23 @@ URxvt.colorUL: #2D566E
 URxvt*color0  : #273B47
 URxvt*color8  : #0E1920
 ! red
-URxvt*color1  : #753434
-URxvt*color9  : #954949
+URxvt*color1  : #653436
+URxvt*color9  : #804749
 ! green
-URxvt*color2  : #4e7e4e
-URxvt*color10 : #699e69
+URxvt*color2  : #4A724E
+URxvt*color10 : #638F67
 ! yellow
-URxvt*color3  : #837f3e
-URxvt*color11 : #8C6257
+URxvt*color3  : #815e48
+URxvt*color11 : #664a39
 ! blue
-URxvt*color4  : #345C75
-URxvt*color12 : #497a95
+URxvt*color4  : #33556A
+URxvt*color12 : #467086
 ! magenta
-URxvt*color5  : #75507B
-URxvt*color13 : #AD7FA8
+URxvt*color5  : #3D3B6D
+URxvt*color13 : #4A4683
 ! cyan
-URxvt*color6  : #387e7a
-URxvt*color14 : #34E2E2
+URxvt*color6  : #3B6B71
+URxvt*color14 : #3B6B71
 ! white
 URxvt*color7  : #213846
 URxvt*color15 : #213846
