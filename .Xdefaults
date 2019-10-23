@@ -16,14 +16,12 @@ URxvt*macro.Ctrl+Shift+c: Copy
 URxvt*macro.Ctrl+Shift+v: Paste
 URxvt*title: URXVT
 
-
 URxvt.background: #111E26
 URxvt.foreground: #66767F
 URxvt.iconFile: ~/.icons/Papirus-Dark/32x32/apps/Etermutilities-terminal.svg
 URxvt.cursorColor: #66767F
 URxvt*cursorUnderline: true
 URxvt.colorUL: #2D566E
-
 
 ! black
 URxvt*color0  : #273B47
