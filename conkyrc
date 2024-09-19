@@ -1,0 +1,55 @@
+# Settings
+background no
+use_xft yes
+xftfont cure:size=10
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type normal
+#own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 180 180
+maximum_width 180
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color 656667
+default_shade_color 000000
+default_outline_color 828282
+alignment top_left
+gap_x 1709
+gap_y 30
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+###################################### ########
+#  Output
+###################################### ########
+TEXT
+${color #1C3745}SYSTEM ${color}
+Uptime:$alignr$uptime
+RAM:$alignr$mem/$memmax
+Swap usage:$alignr$swap/$swapmax
+Disk usage:$alignr${fs_used /}/${fs_size /}
+CPU 1: ${freq_g 1} GHz $alignr ${cpu cpu1}%
+${color #1C3745}${cpubar cpu1}${color}
+CPU 2: ${freq_g 2} GHz $alignr ${cpu cpu2}%
+${color #1C3745}${cpubar cpu2}${color}
+CPU 3: ${freq_g 3} GHz $alignr ${cpu cpu2}%
+${color #1C3745}${cpubar cpu2}${color}
+CPU 4: ${freq_g 4} GHz $alignr ${cpu cpu2}%
+${color #1C3745}${cpubar cpu2}${color}
+
+${color #1C3745}NETWORK ${color}
+Down: ${downspeedf wlan0}kbps ${alignr}Up: ${upspeedf wlan0}kbps
+${color #1C3745}${downspeedgraph wlan0 14, 90 -l}$alignr ${upspeedgraph wlan0 14, 90 -l}
+Total: ${totaldown wlan0} $alignr Total: ${totalup wlan0}
+
+#${execi 300 sh ~/.conky/.gmail.sh}  ${alignr}${time %a %d %b %y}
+
+${font Sans:weight=Bold:size=40}${color #152933}$alignc${time %r:%M}${font}${color}
