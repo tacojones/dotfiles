@@ -1,0 +1,112 @@
+concentrate() {
+    # Define colors using ANSI escape sequences
+    GREEN="\e[32m"
+    CYAN="\e[36m"
+    RESET="\e[0m"
+
+    # Clear the screen
+    clear
+
+    # Define the menu options
+    MENU_OPTIONS=(
+        "1) Lo-fi Girl"
+        "2) Lofi Geek"
+        "3) Chill Music Lab"
+        "4) Matrix Hacker Music"
+        "5) Dark Hacker Music 1"
+        "6) Dark Hacker Music 2"
+        "7) Dark Synthwave Mix"
+        "8) Hacker Music Mix"
+        "9) Cyberpunk Mix 1"
+        "10) Cyberpunk Mix 2"
+        "11) Cyberpunk Mix 3"
+        "12) Cyberpunk Mix 4"
+        "13) Synthwave Radio"
+        "14) Sci-fi Ambient Music"
+        "0) Exit"
+    )
+
+ # Map menu choices to URLs
+    declare -A STREAM_URLS
+    STREAM_URLS["1"]="https://www.youtube.com/watch?v=jfKfPfyJRdk"
+    STREAM_URLS["2"]="https://www.youtube.com/watch?v=7NOSDKb0HlU"
+    STREAM_URLS["3"]="https://www.youtube.com/watch?v=42TtAZ6W3-k"
+    STREAM_URLS["4"]="https://www.youtube.com/watch?v=t3otBjVZzT0"
+    STREAM_URLS["5"]="https://www.youtube.com/watch?v=32XsfeIX_rM"
+    STREAM_URLS["6"]="https://www.youtube.com/watch?v=bZRemXbO7kU"
+    STREAM_URLS["7"]="https://www.youtube.com/watch?v=Z-VfaG9ZN_U&list=PLB0TkZDs2Cbey473KsBGRZmACdxYeabHL"
+    STREAM_URLS["8"]="https://www.youtube.com/watch?v=xAR6N9N8e6U"
+    STREAM_URLS["9"]="https://www.youtube.com/watch?v=pmxYePDPV6M&list=PLQI53MH5iCMGQuYg2CeF16apTEgI2tIfZ"
+    STREAM_URLS["10"]="https://www.youtube.com/watch?v=rLsJCCNXUto&list=PLdoEP_hOYwD_E99GZ2na6IpYhGX8Bm16z"
+    STREAM_URLS["11"]="https://www.youtube.com/watch?v=H_DsYpd0F9M"
+    STREAM_URLS["12"]="https://www.youtube.com/watch?v=RU1uAAff024"
+    STREAM_URLS["13"]="https://www.youtube.com/watch?v=AF8LSurfct4&list=PLEM4vOSCprStzppPemEYAF6ZEUrQYj5N5"
+    STREAM_URLS["14"]="https://www.youtube.com/watch?v=JkRI2qGxFME"
+
+    # Titles corresponding to the URLs
+    declare -A STREAM_TITLES
+    STREAM_TITLES["1"]="Lo-fi Girl"
+    STREAM_TITLES["2"]="Lofi Geek"
+    STREAM_TITLES["3"]="Chill Music Lab"
+    STREAM_TITLES["4"]="Matrix Hacker Music"
+    STREAM_TITLES["5"]="Dark Hacker Music 1"
+    STREAM_TITLES["6"]="Dark Hacker Music 2"
+    STREAM_TITLES["7"]="Dark Synthwave Mix"
+    STREAM_TITLES["8"]="Hacker Music Mix"
+    STREAM_TITLES["9"]="Cyberpunk Mix 1"
+    STREAM_TITLES["10"]="Cyberpunk Mix 2"
+    STREAM_TITLES["11"]="Cyberpunk Mix 3"
+    STREAM_TITLES["12"]="Cyberpunk Mix 4"
+    STREAM_TITLES["13"]="Synthwave Radio"
+    STREAM_TITLES["14"]="Sci-fi Ambient Music"
+
+
+    # Display the menu with simplified borders and symbols for retro feel
+    printf "${CYAN}┌───────────────────────────────┐\n"
+    printf "│         ${GREEN}Music Streams${CYAN}         │\n"
+    printf "├───────────────────────────────┤\n"
+
+    for option in "${MENU_OPTIONS[@]}"; do
+        printf "│ ${GREEN}%-30s${CYAN}│\n" "$option"
+    done
+
+    printf "└───────────────────────────────┘${RESET}\n"
+
+    # Prompt the user for input with a retro-style flashing effect
+    printf "${GREEN}Enter the number of your choice: ${RESET}"
+    read -r choice
+
+    if [[ "$choice" == "0" ]]; then
+        echo -e "${GREEN}Goodbye!${RESET}"
+        sleep 0.5
+        clear
+        return
+    fi
+
+    STREAM_URL="${STREAM_URLS[$choice]}"
+    TITLE="${STREAM_TITLES[$choice]}"
+
+    if [ -z "$STREAM_URL" ]; then
+        echo -e "${GREEN}Invalid choice. Try again.${RESET}"
+        sleep 0.2
+        concentrate
+        return
+    fi
+
+    # Display loading message
+    echo -e "${GREEN}\nLoading $TITLE stream...${RESET}"
+    sleep 0.1
+
+    # Output the ASCII art logo with retro feel
+    printf "\033[38;5;208m"
+    figlet -c -f small "$TITLE"
+    printf "\033[0m"
+
+    # Start the stream
+    mpv --no-video --ytdl-format=bestaudio --volume=100 --really-quiet "$@" "$STREAM_URL"
+
+    # After playback ends
+    echo -e "${GREEN}Stream ended. Returning to the menu...${RESET}"
+    sleep 0.5
+    concentrate
+}
